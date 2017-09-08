@@ -1,5 +1,8 @@
 import * as React from 'react';
 import '../assets/main/main.css';
+import Menu from './Menu';
+import ContentSlides from './ContentSlides';
+
 
 export default class Root extends React.Component{
     constructor(props) {
@@ -11,7 +14,8 @@ export default class Root extends React.Component{
     render() {
         return (
             <div className="root-background-div">
-                TESTY MC TESTFACE
+                <Menu />
+                <ContentSlides />
             </div>
         );
     }

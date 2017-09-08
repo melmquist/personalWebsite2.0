@@ -1,4 +1,13 @@
+// --- GOOGLE FONT IMPORT --- //
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Raleway:400,700');
+
+// --- RESETS --- //
+
+body {
+    display: block;
+    margin: 0px;
+}    
 // --- PROTOTYPING UTILITY STYLES --- //
 
 .redBorder {
@@ -11,4 +20,26 @@
 
 .blueBorder {
     border: solid 1px blue
+}
+
+// --- FONT STYLES --- //
+
+.playfairRegular {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.playfairBold {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.ralewayRegular {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+.ralewayBold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
 }

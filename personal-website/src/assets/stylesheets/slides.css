@@ -1,0 +1,15 @@
+.about-background-div {
+  height: 100vh;
+  background-color: red; }
+
+.projects-background-div {
+  height: 100vh;
+  background-color: blue; }
+
+.passions-background-div {
+  height: 100vh;
+  background-color: yellow; }
+
+.contact-background-div {
+  height: 100vh;
+  background-color: green; }

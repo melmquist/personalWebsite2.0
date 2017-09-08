@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Raleway:400,700");
+body {
+  display: block;
+  margin: 0px; }
+
+.redBorder {
+  border: solid 1px red; }
+
+.greenBorder {
+  border: solid 1px green; }
+
+.blueBorder {
+  border: solid 1px blue; }
+
+.playfairRegular {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; }
+
+.playfairBold {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; }
+
+.ralewayRegular {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; }
+
+.ralewayBold {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700; }
+
+.menu-background-div {
+  position: fixed;
+  height: 100%;
+  width: 20%; }
+
+.vertical-line {
+  width: 5px;
+  position: absolute;
+  float: right;
+  left: 100%;
+  top: 12%;
+  height: 75%;
+  background-color: black;
+  z-index: 100; }
+
+.menu-content-div {
+  top: 30%;
+  display: block;
+  position: relative; }
+
+.menu-item {
+  text-align: center;
+  font-size: 150%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  cursor: pointer; }
+
+.menu-item:hover {
+  color: pink; }
+
+.content-slides-background-div {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 80%;
+  left: 20%; }
+
+.projects-background-div {
+  height: 100vh; }
+
+.passions-background-div {
+  height: 100vh; }
+
+.contact-background-div {
+  height: 100vh; }
+
+.about-background-div {
+  height: 100vh; }
+
+.about-image {
+  height: 100px; }
