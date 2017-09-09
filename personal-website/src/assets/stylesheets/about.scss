@@ -1,12 +1,44 @@
 .about-background-div {
     height: 100vh;
-    // background-color: red;
+    // background-color: red;    
+    position: relative;
+    width: 100%;
+    margin: auto;
+    // height: 300px;
+    display: block
 }
 
 .about-content-div {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+
+.about-image-div {
+    // position: relative;
+    margin: 0 auto;
+    // left: 40%;   
+    width: 36%
     
 }
 
 .about-image {
-    height: 100px;
+    width: 100%
+}
+
+.about-header-div {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 24px;
+}
+
+.about-text-div {
+    padding-top: 20px;
+    padding-left: 20%;
+    padding-right: 16%;
+    line-height: 22px;
 }
