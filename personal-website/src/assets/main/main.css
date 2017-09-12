@@ -100,10 +100,21 @@ body {
   line-height: 22px; }
 
 .projects-background-div {
-  height: 100vh; }
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: block; }
+
+.projects-content-div {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%; }
 
 .projectCard {
-  width: 50%; }
+  width: 100%; }
 
 .autoi-background-div {
   background-color: rgba(37, 47, 83, 0); }

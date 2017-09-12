@@ -1,14 +1,25 @@
 .projects-background-div {
     height: 100vh;
     // background-color: blue;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    // height: 300px;
+    display: block
 }
 
 .projects-content-div {
-
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    // height: 100%;
 }
 
+
 .projectCard {
-    width: 50%;
+    width: 100%;
 }
 
 

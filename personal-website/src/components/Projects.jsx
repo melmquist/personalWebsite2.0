@@ -16,27 +16,37 @@ export default class Projects extends React.Component{
 
     render() {
         return (
-            <div className="projects-background-div">
-                <div className="projects-content-div redBorder">
-                    {/* <Row>   
-                        <Col xs={12} sm={6} md={6}> */}
+            <div className="projects-background-div blueBorder">
+                <div className="projects-content-div greenBorder">
+                    <Row>   
+                       
+                        <Col md={6}>
                             <div className="autoi-background-div projectCard redBorder">   
                                 <img className="autoiLogo" src={autoiLogo2} alt="autoiLogo" />
                             </div>
-
+                        </Col>
+                        <Col md={6}>
                             <div className="wejay-background-div projectCard redBorder">   
                                 <img className="wejayLogo" src={wejayLogo} alt="wejayLogo" />
                             </div>
-
+                            
+                        </Col> 
+                    </Row> 
+                    <Row> 
+                        <Col md={6}>
                             <div className="stackfighter-background-div projectCard redBorder">   
                                 <img className="stackfighterImage" src={stackfighterImage} alt="stackfighterImage" />
                             </div>
 
+                        </Col>
+                        <Col md={6}>
+
                             <div className="journalist-background-div projectCard redBorder">   
                                 <img className="journalistImage" src={journalistImage} alt="journalistImage" />
                             </div>
-                        {/* </Col> 
-                    </Row>     */}
+                        </Col>
+                         
+                    </Row>    
                    
 
                     
