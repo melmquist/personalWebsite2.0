@@ -10,9 +10,19 @@ export default class Projects extends React.Component{
     render() {
         return (
             <div className="projects-background-div">
-                Projects
+                <div className="projects-content-div">
+                    
+                </div>
             </div>
         );
     }
 }
 
+const OneProjectDiv = (props) => {
+
+    return (
+        <div className="one-project-background-div">   
+
+        </div>
+    );
+}

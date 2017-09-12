@@ -28,6 +28,13 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
 
+.content-slides-background-div {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 80%;
+  left: 20%; }
+
 .menu-background-div {
   position: fixed;
   height: 100%;
@@ -57,22 +64,6 @@ body {
 
 .menu-item:hover {
   color: pink; }
-
-.content-slides-background-div {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 80%;
-  left: 20%; }
-
-.projects-background-div {
-  height: 100vh; }
-
-.passions-background-div {
-  height: 100vh; }
-
-.contact-background-div {
-  height: 100vh; }
 
 .about-background-div {
   height: 100vh;
@@ -107,3 +98,12 @@ body {
   padding-left: 20%;
   padding-right: 16%;
   line-height: 22px; }
+
+.projects-background-div {
+  height: 100vh; }
+
+.passions-background-div {
+  height: 100vh; }
+
+.contact-background-div {
+  height: 100vh; }
