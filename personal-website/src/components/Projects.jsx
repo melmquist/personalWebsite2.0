@@ -1,10 +1,12 @@
 import * as React from 'react';
 import '../assets/main/main.css';
+import { Row, Col } from 'react-flexbox-grid';
 
-const autoiImage = require()
-const wejayImage = require()
-const stackfighterImage = require()
-const freelanceImage = require()
+const autoiLogo = require('../assets/webImages/logo@3x.png');
+const autoiLogo2 = require('../assets/webImages/autoilogo.png');
+const wejayLogo = require('../assets/webImages/wejayLogo.png');
+const stackfighterImage = require('../assets/webImages/stackfighterScreenshot.png');
+const journalistImage = require('../assets/webImages/journalist.png');
 
 export default class Projects extends React.Component{
     constructor(props) {
@@ -15,21 +17,34 @@ export default class Projects extends React.Component{
     render() {
         return (
             <div className="projects-background-div">
-                <div className="projects-content-div">
+                <div className="projects-content-div redBorder">
+                    {/* <Row>   
+                        <Col xs={12} sm={6} md={6}> */}
+                            <div className="autoi-background-div projectCard redBorder">   
+                                <img className="autoiLogo" src={autoiLogo2} alt="autoiLogo" />
+                            </div>
+
+                            <div className="wejay-background-div projectCard redBorder">   
+                                <img className="wejayLogo" src={wejayLogo} alt="wejayLogo" />
+                            </div>
+
+                            <div className="stackfighter-background-div projectCard redBorder">   
+                                <img className="stackfighterImage" src={stackfighterImage} alt="stackfighterImage" />
+                            </div>
+
+                            <div className="journalist-background-div projectCard redBorder">   
+                                <img className="journalistImage" src={journalistImage} alt="journalistImage" />
+                            </div>
+                        {/* </Col> 
+                    </Row>     */}
+                   
+
+                    
 
                 </div>
             </div>
         );
     }
-}
-
-const OneProjectDiv = (props) => {
-
-    return (
-        <div className="one-project-background-div">   
-            
-        </div>
-    );
 }
 
 /*
