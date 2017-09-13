@@ -21,34 +21,22 @@ export default class Projects extends React.Component{
                     <Row>   
                        
                         <Col className="" md={6} sm={6} xs={12}>
-                            <div className="projectCardOuter">
-                                <div className="autoi-background-div projectCard">   
-                                    <img className="autoiLogo" src={autoiLogo2} alt="autoiLogo" />
-                                </div>
-                            </div>
+                            <ProjectCard image={autoiLogo2}/>
+                            
                         </Col>
                         <Col className="" md={6} sm={6} xs={12}>
-                            <div className="projectCardOuter wejay-background-div">
-                                <div className="wejay-background-div projectCard ">   
-                                    <img className="wejayLogo" src={wejayLogo} alt="wejayLogo" />
-                                </div>
-                            </div>
+                            <ProjectCard image={wejayLogo}/>
+
                         </Col> 
                     </Row> 
                     <Row> 
                         <Col className="" md={6} sm={6} xs={12}>
-                            <div className="projectCardOuter">
-                                <div className="stackfighter-background-div projectCard">   
-                                    <img className="stackfighterImage" src={stackfighterImage} alt="stackfighterImage" />
-                                </div>
-                            </div>
+                            <ProjectCard image={stackfighterImage}/>
+        
                         </Col>
                         <Col className="" md={6} sm={6} xs={12}>
-                            <div className="projectCardOuter">
-                                <div className="journalist-background-div projectCard">   
-                                    <img className="journalistImage" src={journalistImage} alt="journalistImage" />
-                                </div>
-                            </div>
+                            <ProjectCard image={journalistImage}/>
+           
                         </Col>
                          
                     </Row>    
@@ -61,6 +49,26 @@ export default class Projects extends React.Component{
         );
     }
 }
+
+const ProjectCard = (props) => {
+    let { backColor, image} = props;
+    return (
+        <div className="projectCardOuter">
+            <div className="projectCard">   
+                <img className="projectImage" src={image} alt={image} />
+            </div>
+            <div className="animationHoverDiv">
+
+            </div>
+        </div>
+    );
+}
+
+// const HoverTransition = () => {
+//     const componentClasses = ['animationHoverDiv'];
+
+//     if(show)
+// }
 
 /*
 just one background div with picture, 

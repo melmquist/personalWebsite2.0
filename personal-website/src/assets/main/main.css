@@ -131,24 +131,14 @@ body {
 .autoi-background-div {
   background-color: rgba(37, 47, 83, 0); }
 
-.autoiLogo {
+.projectImage {
   width: 100%;
   height: 100%; }
 
-.wejay-background-div {
-  background-color: #ec4616; }
-
-.wejayLogo {
-  width: 100%;
-  height: 100%; }
-
-.stackfighterImage {
-  width: 100%;
-  height: 100%; }
-
-.journalistImage {
-  width: 100%;
-  height: 100%; }
+.animationHoverDiv {
+  background-color: black;
+  height: 100%;
+  width: 85%; }
 
 .passions-background-div {
   height: 100vh; }
