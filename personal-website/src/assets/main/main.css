@@ -141,8 +141,9 @@ body {
   width: 0%;
   -webkit-transition: width 2s;
   /* For Safari 3.1 to 6.0 */
-  transition: width 1s;
-  z-index: 100; }
+  transition: width 0.5s;
+  z-index: 100;
+  position: absolute; }
 
 .animationHoverDivEngaged {
   width: 85%; }
