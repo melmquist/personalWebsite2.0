@@ -136,8 +136,15 @@ body {
   height: 100%; }
 
 .animationHoverDiv {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.25);
   height: 100%;
+  width: 0%;
+  -webkit-transition: width 2s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 1s;
+  z-index: 100; }
+
+.animationHoverDivEngaged {
   width: 85%; }
 
 .passions-background-div {

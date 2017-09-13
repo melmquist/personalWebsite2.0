@@ -36,6 +36,7 @@
     "react-dom": "^15.6.1",
     "react-flexbox-grid": "^1.1.5",
     "react-scroll": "^1.5.4",
+    "react-transition-group": "^2.2.0",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "typed.js": "^2.0.5",
