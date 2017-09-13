@@ -16,33 +16,38 @@ export default class Projects extends React.Component{
 
     render() {
         return (
-            <div className="projects-background-div blueBorder">
-                <div className="projects-content-div greenBorder">
+            <div className="projects-background-div ">
+                <div className="projects-content-div ">
                     <Row>   
                        
-                        <Col md={6}>
-                            <div className="autoi-background-div projectCard redBorder">   
-                                <img className="autoiLogo" src={autoiLogo2} alt="autoiLogo" />
+                        <Col className="" md={6} sm={6} xs={12}>
+                            <div className="projectCardOuter">
+                                <div className="autoi-background-div projectCard">   
+                                    <img className="autoiLogo" src={autoiLogo2} alt="autoiLogo" />
+                                </div>
                             </div>
                         </Col>
-                        <Col md={6}>
-                            <div className="wejay-background-div projectCard redBorder">   
-                                <img className="wejayLogo" src={wejayLogo} alt="wejayLogo" />
+                        <Col className="" md={6} sm={6} xs={12}>
+                            <div className="projectCardOuter wejay-background-div">
+                                <div className="wejay-background-div projectCard ">   
+                                    <img className="wejayLogo" src={wejayLogo} alt="wejayLogo" />
+                                </div>
                             </div>
-                            
                         </Col> 
                     </Row> 
                     <Row> 
-                        <Col md={6}>
-                            <div className="stackfighter-background-div projectCard redBorder">   
-                                <img className="stackfighterImage" src={stackfighterImage} alt="stackfighterImage" />
+                        <Col className="" md={6} sm={6} xs={12}>
+                            <div className="projectCardOuter">
+                                <div className="stackfighter-background-div projectCard">   
+                                    <img className="stackfighterImage" src={stackfighterImage} alt="stackfighterImage" />
+                                </div>
                             </div>
-
                         </Col>
-                        <Col md={6}>
-
-                            <div className="journalist-background-div projectCard redBorder">   
-                                <img className="journalistImage" src={journalistImage} alt="journalistImage" />
+                        <Col className="" md={6} sm={6} xs={12}>
+                            <div className="projectCardOuter">
+                                <div className="journalist-background-div projectCard">   
+                                    <img className="journalistImage" src={journalistImage} alt="journalistImage" />
+                                </div>
                             </div>
                         </Col>
                          
