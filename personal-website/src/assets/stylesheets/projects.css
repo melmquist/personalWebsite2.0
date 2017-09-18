@@ -38,8 +38,22 @@
   background-color: rgba(0, 0, 0, 0.25);
   height: 100%;
   width: 0%;
+  transition: width 200ms;
+  -webkit-transition: width 200ms;
+  -moz-transition: width 200ms;
+  -o-transition: width 200ms;
+  transition: width 200ms;
   z-index: 100;
   position: absolute; }
 
-.animationHoverDivEngaged {
+.animation-entering {
   width: 85%; }
+
+.animation-entered {
+  width: 85%; }
+
+.animation-exiting {
+  width: 0%; }
+
+.animation-exited {
+  width: 0%; }

@@ -82,46 +82,37 @@ class ProjectCard extends React.Component{
     handleMouseEnter() {
         this.setState({
             // animationClasses: [...this.state.animationClasses, 'animationHoverDivEngaged']
-            transitionInOut: true
+            // transitionInOut: true,
+            in: true
         })
     }
 
     handleMouseLeave() {
         this.setState((prevState) => ({
             // animationClasses: [...prevState.animationClasses.slice(0,1), ...prevState.animationClasses.slice(1+1)]
-            transitionInOut: false
+            // transitionInOut: false,
+            in: false
         }))
     }
-    
-    toggleEnterState = () => {
-        this.setState({ in: true });
-    }
+
     
     render() {
-        console.log("STATE PROJECT CARD : ", this.state)
+        // console.log("STATE PROJECT CARD : ", this.state)
         return (
             <div className="projectCardOuter" 
                 onMouseEnter={this.handleMouseEnter} 
                 onMouseLeave={this.handleMouseLeave}
             >
-                {/* <div className="projectCard">   
+                <div className="projectCard">   
                     <img className="projectImage" src={this.props.image} alt={this.props.image} />
-                </div> */}
+                </div>
 
-                <Transition timeout={150}>
+                <Transition in={this.state.in} timeout={1000}>
                     {(status) => (
-                        <ProjectCardOverlay status={status}/>
-
+                        <ProjectCardOverlay status={status} />
                     )}
                 </Transition>                
-                <button onClick={this.toggleEnterState}>Click to Enter</button>
-                
-                
-                {/* <Transition in={this.state.in} timeout={500}>
-                    <div className="animationHoverDiv">
-                        ????animationHoverDiv???
-                    </div>
-                </Transition> */}
+
             </div>
         );
     }
@@ -131,9 +122,32 @@ class ProjectCard extends React.Component{
 // MAKE SFC OUT OF OVERLAY, PASS IT INTO STATUS CHILD TRANSITION ABOVE
 
 const ProjectCardOverlay = (props) => { 
+    
+    // const duration = 500;
+
+    // const defaultStyle = {
+    //     backgroundColor: 'rgba(0, 0, 0, 0.25)',
+    //     height: '100%',
+    //     width: '0%',
+    //     transition: `width ${duration}ms`,
+    //     -webkitTransition: background-color 500ms ease-out 1s;
+    //     -moz-transition: background-color 500ms ease-out 1s;
+    //     -o-transition: background-color 500ms ease-out 1s;
+    //     transition: background-color 500ms ease-out 1s;
+    //     position: 'absolute'
+    // }
+
+    // const animationStyle = {
+    //     entering: {width: '85%'},
+    //     entered: {width: '85%'},
+    //     exiting: {width: '0%'},
+    //     exited: {width: '0%'}
+    // }
+
     return (
-        <div className={`animationHoverDiv `}>   
-            props.status is : {props.status}
+        <div className={`animationHoverDiv animation-${props.status}`}>   
+   
+            {console.log("PROPS IN PROJECT CAR OVERLAY: ", props)}
         </div>
     );
 }

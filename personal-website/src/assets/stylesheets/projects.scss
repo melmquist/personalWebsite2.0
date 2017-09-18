@@ -59,15 +59,43 @@
     height: 100%;
     width: 0%;
     // -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
-    // transition: width 0.5s;
+    transition: width 200ms;
+
+    -webkit-transition: width 200ms;
+    -moz-transition: width 200ms;
+    -o-transition: width 200ms;
+    transition: width 200ms;
+
+
     z-index: 100;
     position: absolute;
 }
 
 
-.animationHoverDivEngaged {
+.animation-entering {
     // background-color: rgb(0,0,0);
     // height: 100%;
     width: 85%;
+    // z-index: 100;
+}
+
+.animation-entered {
+    // background-color: rgb(0,0,0);
+    // height: 100%;
+    width: 85%;
+    // z-index: 100;
+}
+
+.animation-exiting {
+    // background-color: rgb(0,0,0);
+    // height: 100%;
+    width: 0%;
+    // z-index: 100;
+}
+
+.animation-exited {
+    // background-color: rgb(0,0,0);
+    // height: 100%;
+    width: 0%;
     // z-index: 100;
 }
