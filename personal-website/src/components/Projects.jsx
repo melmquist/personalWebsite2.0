@@ -68,31 +68,13 @@ class ProjectCard extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            // animationClasses: ['animationHoverDiv']
-            transitionInOut: false
+            in: false
         };
         
         this.handleMouseEnter = this.handleMouseEnter.bind(this)
         this.handleMouseLeave = this.handleMouseLeave.bind(this)
         
-        const defaultStyle = {
-            transition: 'width 0.5s',
-            
-          }
-        const transitionStyles = {
-            entering: {
-                width: '85%'
-            },
-            entered: {
-                width: '85%'
-            },
-            exiting: {
-                width: '0%'
-            },
-            exited: {
-                width: '0%'
-            }
-        }
+       
        
     };
 
@@ -110,7 +92,10 @@ class ProjectCard extends React.Component{
             transitionInOut: false
         }))
     }
-
+    
+    toggleEnterState = () => {
+        this.setState({ in: true });
+    }
     
     render() {
         console.log("STATE PROJECT CARD : ", this.state)
@@ -119,20 +104,39 @@ class ProjectCard extends React.Component{
                 onMouseEnter={this.handleMouseEnter} 
                 onMouseLeave={this.handleMouseLeave}
             >
-                <div className="projectCard">   
+                {/* <div className="projectCard">   
                     <img className="projectImage" src={this.props.image} alt={this.props.image} />
-                </div>
-                <Transition in={this.state.transitionInOut} timeout={500}>
+                </div> */}
+
+                <Transition timeout={150}>
+                    {(status) => (
+                        <ProjectCardOverlay status={status}/>
+
+                    )}
+                </Transition>                
+                <button onClick={this.toggleEnterState}>Click to Enter</button>
+                
+                
+                {/* <Transition in={this.state.in} timeout={500}>
                     <div className="animationHoverDiv">
                         ????animationHoverDiv???
                     </div>
-                </Transition>
+                </Transition> */}
             </div>
         );
     }
     
 }
 
+// MAKE SFC OUT OF OVERLAY, PASS IT INTO STATUS CHILD TRANSITION ABOVE
+
+const ProjectCardOverlay = (props) => { 
+    return (
+        <div className={`animationHoverDiv `}>   
+            props.status is : {props.status}
+        </div>
+    );
+}
 
 
 // const HoverTransition = () => {
