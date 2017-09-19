@@ -13,10 +13,16 @@ const journalistImage = require('../assets/webImages/journalist.png');
 export default class Projects extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            orangeBackground: 'orange',
+            noBackground: 'nothing'
+        };
+        // const orangeBackground = 'orange';        
+        // const noBackground = 'nothing';
     };
 
     render() {
+        console.log("STATE PROJECTS: ", this.state)
         return (
             <div className="projects-background-div ">
                 <div className="projects-content-div ">
@@ -26,6 +32,7 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={autoiLogo2}
                                 header="autoi"
+                                background={this.state.noBackground}
                             />
                             
                         </Col>
@@ -33,6 +40,7 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={wejayLogo}
                                 header="wejay"
+                                background={this.state.orangeBackground}
                             />
 
                         </Col> 
@@ -42,6 +50,7 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={stackfighterImage}
                                 header="stackfighter"
+                                background={this.state.noBackground}
                             />
         
                         </Col>
@@ -49,6 +58,7 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={journalistImage}
                                 header="journalist"
+                                background={this.state.noBackground}
                             />
            
                         </Col>
@@ -94,12 +104,12 @@ class ProjectCard extends React.Component{
             in: false
         }))
     }
-
+    // TODO: FIGURE OUT WHY PASSING OF ORANGE BACKGROUND IS NOT WORKING
     
     render() {
-        // console.log("STATE PROJECT CARD : ", this.state)
+        console.log("PROPS PROJECT CARD : ", this.props)
         return (
-            <div className="projectCardOuter" 
+            <div className={`projectCardOuter background-${this.props.backgound}`}
                 onMouseEnter={this.handleMouseEnter} 
                 onMouseLeave={this.handleMouseLeave}
             >
@@ -119,120 +129,21 @@ class ProjectCard extends React.Component{
     
 }
 
-// MAKE SFC OUT OF OVERLAY, PASS IT INTO STATUS CHILD TRANSITION ABOVE
 
 const ProjectCardOverlay = (props) => { 
-    
-    // const duration = 500;
-
-    // const defaultStyle = {
-    //     backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    //     height: '100%',
-    //     width: '0%',
-    //     transition: `width ${duration}ms`,
-    //     -webkitTransition: background-color 500ms ease-out 1s;
-    //     -moz-transition: background-color 500ms ease-out 1s;
-    //     -o-transition: background-color 500ms ease-out 1s;
-    //     transition: background-color 500ms ease-out 1s;
-    //     position: 'absolute'
-    // }
-
-    // const animationStyle = {
-    //     entering: {width: '85%'},
-    //     entered: {width: '85%'},
-    //     exiting: {width: '0%'},
-    //     exited: {width: '0%'}
-    // }
 
     return (
         <div className={`animationHoverDiv animation-${props.status}`}>   
    
-            {console.log("PROPS IN PROJECT CAR OVERLAY: ", props)}
+            {/* {console.log("PROPS IN PROJECT CAR OVERLAY: ", props)} */}
+
+            <div className="animationHoverDivContent">   
+            <div className="projectLinkText ralewayRegular">Live Link</div>
+            <div className="projectLinkText ralewayRegular">Github Repo</div>
+            <div className="projectLinkText ralewayRegular">Full Description</div>
+            </div>
+            
         </div>
     );
 }
 
-
-// const HoverTransition = () => {
-//     const componentClasses = ['animationHoverDiv'];
-
-//     if(show)
-// }
-
-/*
-just one background div with picture, 
-on hover animate slides over and shows you links/options
-always with a *details* choice that will open up a fullscreen/greyed out dialog box
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class ProjectCard extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            animationClasses: ['animationHoverDiv']
-        };
-        
-        this.handleMouseEnter = this.handleMouseEnter.bind(this)
-        this.handleMouseLeave = this.handleMouseLeave.bind(this)
-    };
-
-
-    handleMouseEnter() {
-        this.setState({
-            animationClasses: [...this.state.animationClasses, 'animationHoverDivEngaged']
-        })
-    }
-
-    handleMouseLeave() {
-        this.setState((prevState) => ({
-            animationClasses: [...prevState.animationClasses.slice(0,1), ...prevState.animationClasses.slice(1+1)]
-        }))
-    }
-
-    
-    render() {
-        console.log("STATE PROJECT CARD : ", this.state)
-        return (
-            <div className="projectCardOuter" 
-                onMouseEnter={this.handleMouseEnter} 
-                onMouseLeave={this.handleMouseLeave}
-            >
-                <div className="projectCard">   
-                    <img className="projectImage" src={this.props.image} alt={this.props.image} />
-                </div>
-                <div className={this.state.animationClasses.join(' ')}>
-    
-                </div>
-            </div>
-        );
-    }
-    
-}
-
-
-
-
-
-
-
-*/
