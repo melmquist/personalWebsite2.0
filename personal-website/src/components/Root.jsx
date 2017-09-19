@@ -17,7 +17,9 @@ var scroller = Scroll.scroller;
 export default class Root extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            currentMenuHighlight: null
+        };
         this.snapScroll = this.snapScroll.bind(this);
         
     };
@@ -60,6 +62,14 @@ export default class Root extends React.Component{
         });
         Events.scrollEvent.register('end', function() {
             console.log("end", arguments);
+            console.log("END 0", arguments[0]);
+            
+            // basically what I'm trying to do is bubble down to the menu component which item should be highlighted by passing down props after the state is set up here...
+            // MAYBE YOU CANNOT CALL SET STATE FROM COMP DID MOUNT????
+            this.setState({
+                currentMenuHighlight: arguments[0]
+            })
+
         });
         scrollSpy.update();
     }
@@ -73,11 +83,12 @@ export default class Root extends React.Component{
         return (
             <div className="root-background-div">
                
-                <Menu snapScroll={this.snapScroll}/>
+                <Menu currentMenuHighlight={this.state.currentMenuHighlight} snapScroll={this.snapScroll}/>
 
 
                 <div className="content-slides-background-div">
                     <Element name="aboutSnapScrollTarget" className="element">
+                        {console.log("PROPS: ", this.props)}
                         <About />
                     </Element>
                     

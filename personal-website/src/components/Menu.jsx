@@ -66,7 +66,8 @@ export default class Menu extends React.Component{
     }
 
     render() {
-        // console.log("this.state, ", this.state)
+        console.log("MENU this.state, ", this.state)
+        console.log("MENU this.props, ", this.props)
         return (
             <div className="menu-background-div ">
                 <div className="vertical-line "></div>

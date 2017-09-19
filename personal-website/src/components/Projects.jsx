@@ -22,7 +22,7 @@ export default class Projects extends React.Component{
     };
 
     render() {
-        console.log("STATE PROJECTS: ", this.state)
+        // console.log("STATE PROJECTS: ", this.state)
         return (
             <div className="projects-background-div ">
                 <div className="projects-content-div ">
@@ -107,7 +107,7 @@ class ProjectCard extends React.Component{
     // TODO: FIGURE OUT WHY PASSING OF ORANGE BACKGROUND IS NOT WORKING
     
     render() {
-        console.log("PROPS PROJECT CARD : ", this.props)
+        // console.log("PROPS PROJECT CARD : ", this.props)
         return (
             <div className={`projectCardOuter background-${this.props.backgound}`}
                 onMouseEnter={this.handleMouseEnter} 
