@@ -65,6 +65,30 @@ body {
 .menu-item:hover {
   color: pink; }
 
+.about-selected-true {
+  color: pink; }
+
+.about-selected-false {
+  color: black; }
+
+.projects-selected-true {
+  color: pink; }
+
+.projects-selected-false {
+  color: black; }
+
+.passions-selected-true {
+  color: pink; }
+
+.passions-selected-false {
+  color: black; }
+
+.contact-selected-true {
+  color: pink; }
+
+.contact-selected-false {
+  color: black; }
+
 .about-background-div {
   height: 100vh;
   position: relative;
