@@ -12,7 +12,7 @@ export default class About extends React.Component{
     }
 
     componentDidMount() {
-        let strings = ['Hi my name is Matt Elmquist and I\'m a Fullstack Javascript Engineer']
+        let strings = ['Hi my name is Matt Elmquist! <br/>I\'m a Fullstack Javascript Engineer']
 
         // You can pass other options here, such as typing speed, back speed, etc.
         const options = {

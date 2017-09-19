@@ -1,5 +1,35 @@
 .passions-background-div {
     height: 100vh;
-    // background-color: yellow;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    // height: 300px;
+    display: block
 }
 
+.passions-content-div {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    height: 70%;
+}
+
+.passions-header-div {
+
+}
+
+.passion-div {
+    padding-top: 35px;
+}
+
+.passion-header {
+    font-size: 1.4em;
+    padding-bottom: 10px;
+}
+
+.passion-copy {
+    font-size: 1em;
+    line-height: 1.4em;
+}
