@@ -10,10 +10,10 @@ export default class Passions extends React.Component{
     render() {
         return (
             <div className="passions-background-div">
-                <div className="passions-content-div ">
+                <div className="passions-content-div">
                     
                     <div className="passions-header-div ralewayRegular">
-                        I am extremely passionate about Javascript, but here are some other things in my life that get me excited. 
+                        I am extremely passionate about Javascript, but here are the other things that get me excited. 
                     </div>
 
 

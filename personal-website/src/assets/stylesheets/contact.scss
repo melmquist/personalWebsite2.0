@@ -1,4 +1,38 @@
 .contact-background-div {
     height: 100vh;
-    // background-color: green;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    display: block
+}
+ 
+.contact-content-div {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 85%;
+    // height: 70%;
+}
+
+.contact-copy-div {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    padding-bottom: 20px;
+}
+
+.contact-icons-div {
+    text-align: center;
+}
+
+.contact-icons-div img {
+    width: 60px;
+    margin: 15px;
+}
+
+.contact-lower-copy-div {
+    text-align: center;
+    font-size: 1.4em;
+    padding-top: 20px;
 }

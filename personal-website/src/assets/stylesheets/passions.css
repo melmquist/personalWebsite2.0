@@ -10,15 +10,15 @@
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 85%;
-  height: 70%; }
+  width: 85%; }
 
 .passion-div {
   padding-top: 35px; }
 
 .passion-header {
   font-size: 1.4em;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  font-size: 1.4em; }
 
 .passion-copy {
   font-size: 1em;
