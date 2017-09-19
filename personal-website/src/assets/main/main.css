@@ -172,8 +172,12 @@ body {
 .projectLinkText {
   color: white;
   font-size: 1.2em;
-  margin-left: 25%;
-  margin-top: 4%; }
+  padding-left: 25%;
+  padding-top: 4%;
+  cursor: pointer; }
+
+.projectLinkText:hover {
+  color: #FF728A; }
 
 .passions-background-div {
   height: 100vh; }

@@ -138,9 +138,9 @@ const ProjectCardOverlay = (props) => {
             {/* {console.log("PROPS IN PROJECT CAR OVERLAY: ", props)} */}
 
             <div className="animationHoverDivContent">   
-            <div className="projectLinkText ralewayRegular">Live Link</div>
-            <div className="projectLinkText ralewayRegular">Github Repo</div>
-            <div className="projectLinkText ralewayRegular">Full Description</div>
+            <div className="projectLinkText ralewayBold">Live Link</div>
+            <div className="projectLinkText ralewayBold">Github Repo</div>
+            <div className="projectLinkText ralewayBold">Full Description</div>
             </div>
             
         </div>
