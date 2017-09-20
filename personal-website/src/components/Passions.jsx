@@ -48,6 +48,8 @@ export default class Passions extends React.Component{
 
 
                 </div>
+                <div className="fade-line"></div>
+
             </div>
         );
     }

@@ -28,6 +28,16 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 700; }
 
+.fade-line {
+  margin: auto;
+  height: 1px;
+  background: #A0A0A0;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(white), to(white), color-stop(50%, #AEAEAE));
+  width: 50%;
+  position: absolute;
+  top: 100vh;
+  left: 25%; }
+
 .content-slides-background-div {
   position: absolute;
   display: block;
@@ -119,10 +129,11 @@ body {
 
 .about-text-div {
   padding-top: 30px;
-  width: 70%;
+  width: 80%;
   line-height: 22px;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  font-size: 1.1em; }
 
 .projects-background-div {
   height: 100vh;
@@ -217,6 +228,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 85%; }
+
+.passions-header-div {
+  font-size: 1.4em; }
 
 .passion-div {
   padding-top: 35px; }

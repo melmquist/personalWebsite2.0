@@ -12,6 +12,9 @@
   transform: translate(-50%, -50%);
   width: 85%; }
 
+.passions-header-div {
+  font-size: 1.4em; }
+
 .passion-div {
   padding-top: 35px; }
 

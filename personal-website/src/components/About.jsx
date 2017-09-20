@@ -12,12 +12,14 @@ export default class About extends React.Component{
     }
 
     componentDidMount() {
-        let strings = ['Hi my name is Matt Elmquist! <br/>I\'m a Fullstack Javascript Engineer']
+        let strings = ['Hi my name is Matt Elmquist <br/>I\'m a Fullstack Javascript Engineer']
 
         // You can pass other options here, such as typing speed, back speed, etc.
         const options = {
     	    strings: strings,
             typeSpeed: 50,
+            cursorChar: '_',
+            autoInsertCss: true
         };
 
         this.typed = new Typed(this.el, options);
@@ -49,8 +51,12 @@ export default class About extends React.Component{
                             ref={(el) => { this.el = el }}
                         />
                     </div>
-                    <div className="about-text-div ralewayRegular">I am passionate about building beautiful front end applications and optimizing the processes that underpin their functionality.</div>
+                    <div className="about-text-div ralewayRegular">
+                        I am passionate about building beautiful front end applications and optimizing the processes that underpin their functionality.
                     </div>
+        
+                </div>
+                <div className="fade-line"></div>
             </div>
 
             

@@ -69,6 +69,7 @@ export default class Projects extends React.Component{
                     
 
                 </div>
+                <div className="fade-line"></div>
             </div>
         );
     }
