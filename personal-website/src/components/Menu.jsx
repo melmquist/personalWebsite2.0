@@ -21,7 +21,7 @@ export default class Menu extends React.Component{
     }
 
     handleScrollMenuHighlight(val) {
-        console.log("handleScrollMenuHighlight CALLED with val - ", val)
+        // console.log("handleScrollMenuHighlight CALLED with val - ", val)
         switch(val) {
             case 0: 
                 this.setState({
@@ -78,7 +78,7 @@ export default class Menu extends React.Component{
 
     render() {
         // console.log("MENU this.state, ", this.state)
-        console.log("MENU this.props, ", this.props)
+        // console.log("MENU this.props, ", this.props)
         return (
             <div className="menu-background-div ">
                 <div className="vertical-line "></div>

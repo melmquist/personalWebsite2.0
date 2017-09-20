@@ -3,6 +3,7 @@ import '../assets/main/main.css';
 import { Row, Col } from 'react-flexbox-grid';
 import Transition from 'react-transition-group/Transition';
 
+const ScrollLock = require('react-scrolllock')
 
 const autoiLogo = require('../assets/webImages/logo@3x.png');
 const autoiLogo2 = require('../assets/webImages/autoilogo.png');
@@ -15,15 +16,45 @@ export default class Projects extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            orangeBackground: 'orange',
-            noBackground: 'nothing'
+            showAutoIModal: false,
+            showWejayModal: false,
+            showStackfighterModal: false, 
+            showJournalistModal: false
         };
-        // const orangeBackground = 'orange';        
-        // const noBackground = 'nothing';
+        
+        this.handleModal = this.handleModal.bind(this);
+        this.handleCancelModal = this.handleCancelModal.bind(this);
+        
     };
 
+    handleModal(ref) {
+        console.log("HANDLE MODAL CALLED WITH REF???", ref)
+        if(ref === "autoi") {
+            this.setState({showAutoIModal: true})
+        }
+        if(ref === "wejay") {
+            this.setState({showWejayModal: true})
+        }
+        if(ref === "stackfighter") {
+            this.setState({showStackfighterModal: true})
+        }
+        if(ref === "journalist") {
+            this.setState({showJournalistModal: true})
+        }
+    }
+
+    handleCancelModal() {
+        console.log("handleCancelModal CALLED UP TOP")
+        this.setState({
+            showAutoIModal: false,
+            showWejayModal: false,
+            showStackfighterModal: false, 
+            showJournalistModal: false
+        })
+    }
+
     render() {
-        // console.log("STATE PROJECTS: ", this.state)
+        console.log("STATE PROJECTS: ", this.state)
         return (
             <div className="projects-background-div ">
                 <div className="projects-content-div ">
@@ -34,14 +65,27 @@ export default class Projects extends React.Component{
                                 image={autoiLogo2}
                                 header="autoi"
                                 background={this.state.noBackground}
+                                handleModal={this.handleModal}
                             />
+                            {
+                                this.state.showAutoIModal && this.state.showAutoIModal ? 
+                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <div></div>
+                            }
+                           
                         </Col>
                         <Col className="" md={6} sm={6} xs={12}>
                             <ProjectCard 
                                 image={wejayLogo}
                                 header="wejay"
                                 background={this.state.orangeBackground}
+                                handleModal={this.handleModal}
                             />
+                            {
+                                this.state.showWejayModal && this.state.showWejayModal ? 
+                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <div></div>
+                            }
 
                         </Col> 
                     </Row> 
@@ -51,7 +95,13 @@ export default class Projects extends React.Component{
                                 image={stackfighterImage}
                                 header="stackfighter"
                                 background={this.state.noBackground}
+                                handleModal={this.handleModal}
                             />
+                            {
+                                this.state.showStackfighterModal && this.state.showStackfighterModal ? 
+                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <div></div>
+                            }
         
                         </Col>
                         <Col className="" md={6} sm={6} xs={12}>
@@ -59,7 +109,13 @@ export default class Projects extends React.Component{
                                 image={journalistImage}
                                 header="journalist"
                                 background={this.state.noBackground}
+                                handleModal={this.handleModal}
                             />
+                            {
+                                this.state.showJournalistModal && this.state.showJournalistModal ? 
+                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <div></div>
+                            }
            
                         </Col>
                          
@@ -113,7 +169,7 @@ class ProjectCard extends React.Component{
 
                 <Transition in={this.state.in} timeout={1000}>
                     {(status) => (
-                        <ProjectCardOverlay status={status} />
+                        <ProjectCardOverlay handleModal={this.props.handleModal} status={status} headerRef={this.props.header}/>
                     )}
                 </Transition>                
                 
@@ -125,39 +181,63 @@ class ProjectCard extends React.Component{
 }
 
 
-const ProjectCardOverlay = (props) => { 
+class ProjectCardOverlay extends React.Component{ 
+    constructor(props) {
+        super(props);
+        this.state = {};
+        this.handleModalDownHere = this.handleModalDownHere.bind(this)
+    }
 
-    return (
-        <div className={`animationHoverDiv animation-${props.status}`}>   
-   
-            {/* {console.log("PROPS IN PROJECT CAR OVERLAY: ", props)} */}
+    handleModalDownHere() {
+        this.props.handleModal(this.props.headerRef)
+    }
 
-            <div className="animationHoverDivContent">   
-            <div className="projectLinkText ralewayBold">Live Link</div>
-            <div className="projectLinkText ralewayBold">Github Repo</div>
-            <div className="projectLinkText ralewayBold">Full Description</div>
+    render() {
+        return (
+            <div className={`animationHoverDiv animation-${this.props.status}`}>   
+       
+                {/* {console.log("this.PROPS IN PROJECT CAR OVERLAY: ", this.props)} */}
+    
+                <div className="animationHoverDivContent">   
+                    <div className="projectLinkText ralewayBold">Live Link</div>
+                    <div className="projectLinkText ralewayBold">Github Repo</div>
+                    <div className="projectLinkText ralewayBold" onClick={this.handleModalDownHere}>Full Description</div>
+                    {/* THIS DOESNT KNOW HOW TO PASS UP A REF 
+                    MAYBE BECAUSE IT DOESNT HAVE ITS OWN STATE????
+                    SO MAKE IT A STATEFUL COMPONENT AND BUBBLE THE SHIT UP VIA A HELPER FUNCTION IN HERE???????????????? */}
+                </div>
+                
             </div>
-            
-        </div>
-    );
+        );
+    }
+    
 }
 
-// class ProjectModal extends React.Component {
-//     constructor(props) {
-//         super(props)
-//         this.state = {};
-//     }
+class ProjectModal extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {};
+        this.handleCancel = this.handleCancel.bind(this)
+    }
 
-//     render() {
-//         return (
-//             <div className="project-modal-background redBorder">   
-//                 <div className="modal-exit-button">
-//                     <img src={cancel} alt="cancel" />
-//                 </div>
-//                 {/* <div className="project-modal-inner redBorder">   
-                
-//                 </div> */}
-//             </div>
-//         );
-//     }
-// }
+    handleCancel() {
+        console.log("HANDLE CANCEL CALLED")
+        this.props.handleCancel()
+    }
+
+    render() {
+        return (
+            <div className="project-modal-background redBorder">   
+                <ScrollLock />
+                <div className="project-modal-outer redBorder">   
+                    <div className="modal-exit-button-div blueBorders">
+                        <img className="modal-exit-button-img" src={cancel} alt="cancel" onClick={this.handleCancel}/>
+                    </div>
+                    <div className="project-modal-inner redBorder">   
+                    
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}

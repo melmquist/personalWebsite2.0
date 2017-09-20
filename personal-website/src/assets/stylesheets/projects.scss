@@ -119,19 +119,41 @@
     color: pink;
 }
 
-// .project-modal-background {
-//     position: absolute;
-//     height: 70vh;
-//     width: 75vw;
-//     top: 15vh;
-//     left: -10vw;
-//     z-index: 10;
-//     // background-color: rgba(0, 0, 0, 0.76);
-    
-// }
+.project-modal-background {
+    position: absolute;
+    height: 200vh;
+    width: 200vw;
+    top: -30vh;
+    left: -80vw;
+}
 
-// .project-modal-inner {
-//     height: 100%;
-//     width: 100%;
+.project-modal-outer {
+    position: absolute;
+    height: 70vh;
+    width: 75vw;
+    top: 35vh;
+    left: 70vw;
+    z-index: 10
+}
 
-// }
+.project-modal-inner {
+    height: 90%;
+    width: 90%;
+    position: relative;
+    margin:0 auto;
+    top: 5%;
+    background-color: rgba(0, 0, 0, 0.76);
+}
+
+
+.modal-exit-button-div {
+    float: right;
+    width: 5%;
+    height: 5%;
+}
+
+.modal-exit-button-img {
+    float: right;
+    width: 50px;
+}
+
