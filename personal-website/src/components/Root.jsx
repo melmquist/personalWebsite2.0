@@ -12,16 +12,17 @@ var Element    = Scroll.Element;
 var Events     = Scroll.Events;
 var scrollSpy  = Scroll.scrollSpy;
 var scroller = Scroll.scroller;
+var Link       = Scroll.Link;
 
 
 export default class Root extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            currentMenuHighlight: null
+            currentMenuHighlight: 0
         };
         this.snapScroll = this.snapScroll.bind(this);
-        
+        this.handleScroll = this.handleScroll.bind(this);
     };
 
     snapScroll = (val) => {
@@ -62,21 +63,58 @@ export default class Root extends React.Component{
         });
         Events.scrollEvent.register('end', function() {
             console.log("end", arguments);
-            console.log("END 0", arguments[0]);
-            
-            // basically what I'm trying to do is bubble down to the menu component which item should be highlighted by passing down props after the state is set up here...
-            // MAYBE YOU CANNOT CALL SET STATE FROM COMP DID MOUNT????
-            this.setState({
-                currentMenuHighlight: arguments[0]
-            })
+            // console.log("END 0", arguments[0]);
 
         });
         scrollSpy.update();
+
+        window.addEventListener('scroll', this.handleScroll);
     }
 
     componentWillUnmount() {
         Events.scrollEvent.remove('begin');
         Events.scrollEvent.remove('end');
+    }
+
+    handleScroll() {
+        var winHeight = window.innerHeight;
+        // console.log("winHeight, ", winHeight)
+     
+        // Annoying to compute doc height due to browser inconsistency
+        var body = document.body;
+        // console.log("body, ", body)
+        
+        var html = document.documentElement;
+        // console.log("html, ", html)
+        
+        var docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        // console.log("docHeight, ", docHeight)        
+     
+        var value = document.body.scrollTop;
+        // console.log("value, ", value)
+
+        let aboutHeight = winHeight - 300;
+        let projectsHeight = winHeight * 2 - 300 ;
+        let passionsHeight = winHeight * 3 - 300;
+        
+
+        if(value < aboutHeight) {
+            // console.log("WE ON ABOUT")
+            this.setState({currentMenuHighlight: 0})
+        } else if(value > aboutHeight && value < projectsHeight) {
+            // console.log("WE ON PROJECTS")
+            this.setState({currentMenuHighlight: 1})
+        } else if(value > projectsHeight && value < passionsHeight) {
+            // console.log("WE ON PASSIONS")
+            this.setState({currentMenuHighlight: 2})
+        } else {
+            // console.log("WE ON CONTACT")
+            this.setState({currentMenuHighlight: 3})
+        }
+
+        // if(value > passionsHeight) {
+        //     console.log("WE ON CONTACT")
+        // } 
     }
 
     render() {
@@ -88,7 +126,7 @@ export default class Root extends React.Component{
 
                 <div className="content-slides-background-div">
                     <Element name="aboutSnapScrollTarget" className="element">
-                        {console.log("PROPS: ", this.props)}
+                        {/* {console.log("PROPS: ", this.props)} */}
                         <About />
                     </Element>
                     

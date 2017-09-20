@@ -11,12 +11,17 @@ export default class Menu extends React.Component{
             contactSelected: false
         };
         this.handleMenuClick = this.handleMenuClick.bind(this)
-    }1
+        this.handleScrollMenuHighlight = this.handleScrollMenuHighlight.bind(this)
+    }
 
     handleMenuClick(val) {
         // this.setState({selected: val})
         this.props.snapScroll(val)
-        
+
+    }
+
+    handleScrollMenuHighlight(val) {
+        console.log("handleScrollMenuHighlight CALLED with val - ", val)
         switch(val) {
             case 0: 
                 this.setState({
@@ -62,11 +67,17 @@ export default class Menu extends React.Component{
                     contactSelected: false
                 })
         }
-
     }
 
+    componentWillReceiveProps(nextProps) {
+        if(this.props.currentMenuHighlight !== nextProps.currentMenuHighlight) {
+            this.handleScrollMenuHighlight(nextProps.currentMenuHighlight)
+        }
+    }
+
+
     render() {
-        console.log("MENU this.state, ", this.state)
+        // console.log("MENU this.state, ", this.state)
         console.log("MENU this.props, ", this.props)
         return (
             <div className="menu-background-div ">
