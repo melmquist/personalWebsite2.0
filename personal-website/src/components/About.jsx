@@ -49,7 +49,7 @@ export default class About extends React.Component{
                             ref={(el) => { this.el = el }}
                         />
                     </div>
-                    <div className="about-text-div ralewayRegular">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div>
+                    <div className="about-text-div ralewayRegular">I am passionate about building beautiful front end applications and optimizing the processes that underpin their functionality.</div>
                     </div>
             </div>
 

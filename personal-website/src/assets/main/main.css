@@ -112,16 +112,17 @@ body {
 
 .about-header-div {
   text-align: center;
-  padding-top: 10px;
+  padding-top: 30px;
   padding-left: 40px;
   padding-right: 40px;
   font-size: 24px; }
 
 .about-text-div {
-  padding-top: 20px;
-  padding-left: 20%;
-  padding-right: 16%;
-  line-height: 22px; }
+  padding-top: 30px;
+  width: 70%;
+  line-height: 22px;
+  text-align: center;
+  margin: auto; }
 
 .projects-background-div {
   height: 100vh;
@@ -247,7 +248,7 @@ body {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.5em;
-  padding-bottom: 20px; }
+  padding-bottom: 30px; }
 
 .contact-icons-div {
   text-align: center; }
@@ -259,4 +260,4 @@ body {
 .contact-lower-copy-div {
   text-align: center;
   font-size: 1.4em;
-  padding-top: 20px; }
+  padding-top: 30px; }

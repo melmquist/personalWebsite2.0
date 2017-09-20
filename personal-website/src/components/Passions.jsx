@@ -22,7 +22,7 @@ export default class Passions extends React.Component{
                             Soccer
                         </div>
                         <div className="passion-copy ralewayRegular">
-                            On any given weekend, you can probably find me on a pitch somewhere in Brooklyn playing pickup soccer. To me, this sport is more than just a sport. It is a vehicle for reminding yourself that despite different cultures, we are all essentially the same. We're all just humans running around trying to score a goal and not to tear an ACL (again).
+                            On any given weekend, you can probably find me on a pitch somewhere in Brooklyn playing pickup soccer. To me, this sport is more than just a sport. It is a vehicle for reminding ourselves that while we may come from different cultures, we are all essentially the same. 
                         </div>
                     </div>
 
