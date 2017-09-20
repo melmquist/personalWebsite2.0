@@ -9,6 +9,7 @@ const autoiLogo2 = require('../assets/webImages/autoilogo.png');
 const wejayLogo = require('../assets/webImages/wejayLogo.png');
 const stackfighterImage = require('../assets/webImages/stackfighterScreenshot.png');
 const journalistImage = require('../assets/webImages/journalist.png');
+const cancel = require('../assets/webImages/cancel.png');
 
 export default class Projects extends React.Component{
     constructor(props) {
@@ -34,7 +35,6 @@ export default class Projects extends React.Component{
                                 header="autoi"
                                 background={this.state.noBackground}
                             />
-                            
                         </Col>
                         <Col className="" md={6} sm={6} xs={12}>
                             <ProjectCard 
@@ -83,25 +83,18 @@ class ProjectCard extends React.Component{
         };
         
         this.handleMouseEnter = this.handleMouseEnter.bind(this)
-        this.handleMouseLeave = this.handleMouseLeave.bind(this)
-        
-       
+        this.handleMouseLeave = this.handleMouseLeave.bind(this)       
        
     };
 
-
     handleMouseEnter() {
         this.setState({
-            // animationClasses: [...this.state.animationClasses, 'animationHoverDivEngaged']
-            // transitionInOut: true,
             in: true
         })
     }
 
     handleMouseLeave() {
         this.setState((prevState) => ({
-            // animationClasses: [...prevState.animationClasses.slice(0,1), ...prevState.animationClasses.slice(1+1)]
-            // transitionInOut: false,
             in: false
         }))
     }
@@ -123,7 +116,8 @@ class ProjectCard extends React.Component{
                         <ProjectCardOverlay status={status} />
                     )}
                 </Transition>                
-
+                
+                
             </div>
         );
     }
@@ -148,3 +142,22 @@ const ProjectCardOverlay = (props) => {
     );
 }
 
+// class ProjectModal extends React.Component {
+//     constructor(props) {
+//         super(props)
+//         this.state = {};
+//     }
+
+//     render() {
+//         return (
+//             <div className="project-modal-background redBorder">   
+//                 <div className="modal-exit-button">
+//                     <img src={cancel} alt="cancel" />
+//                 </div>
+//                 {/* <div className="project-modal-inner redBorder">   
+                
+//                 </div> */}
+//             </div>
+//         );
+//     }
+// }
