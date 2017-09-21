@@ -276,6 +276,17 @@ body {
   font-size: 1em;
   line-height: 1.4em; }
 
+.passion-img-div {
+  display: inline-block;
+  width: 30%; }
+
+.passion-img-div img {
+  width: 200px; }
+
+.passion-text-div {
+  display: inline-block;
+  width: 70%; }
+
 .contact-background-div {
   height: 100vh;
   position: relative;
