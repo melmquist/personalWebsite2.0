@@ -130,7 +130,7 @@ body {
 .about-text-div {
   padding-top: 30px;
   width: 80%;
-  line-height: 22px;
+  line-height: 24px;
   text-align: center;
   margin: auto;
   font-size: 1.1em; }
@@ -237,6 +237,17 @@ body {
   margin: 0 auto;
   top: 5%;
   background-color: rgba(0, 0, 0, 0.76); }
+
+.modal-content-div {
+  margin: 10%; }
+
+.modal-content-header {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2em; }
+
+.modal-content-text {
+  color: white; }
 
 .modal-exit-button-div {
   float: right;

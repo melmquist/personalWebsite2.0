@@ -12,7 +12,27 @@ var Element    = Scroll.Element;
 var Events     = Scroll.Events;
 var scrollSpy  = Scroll.scrollSpy;
 var scroller = Scroll.scroller;
-var Link       = Scroll.Link;
+// var Link       = Scroll.Link;
+
+
+
+
+// const imagemin = require('imagemin');
+// const imageminJpegtran = require('imagemin-jpegtran');
+// const imageminPngquant = require('imagemin-pngquant');
+ 
+// imagemin(['../assets/webImages/*.{jpg,png}'], 'build/images', {
+//     plugins: [
+//         imageminJpegtran(),
+//         imageminPngquant({quality: '65-80'})
+//     ]
+// }).then(files => {
+//     console.log("IMGAGESS  AMALLL: ",files);
+//     //=> [{data: <Buffer 89 50 4e …>, path: 'build/images/foo.jpg'}, …] 
+// });
+
+
+
 
 
 export default class Root extends React.Component{

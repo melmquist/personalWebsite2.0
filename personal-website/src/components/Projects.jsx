@@ -227,14 +227,18 @@ class ProjectModal extends React.Component {
 
     render() {
         return (
-            <div className="project-modal-background redBorder">   
+            <div className="project-modal-background ">   
                 <ScrollLock />
-                <div className="project-modal-outer redBorder">   
-                    <div className="modal-exit-button-div blueBorders">
+                <div className="project-modal-outer ">   
+                    <div className="modal-exit-button-div ">
                         <img className="modal-exit-button-img" src={cancel} alt="cancel" onClick={this.handleCancel}/>
                     </div>
-                    <div className="project-modal-inner redBorder">   
-                    
+                    <div className="project-modal-inner ">   
+                        <div className="modal-content-div "> 
+                            <div className="modal-content-header ralewayBold">Placeholder</div>
+                            <div className="modal-content-text ralewayRegular">We're really excited that you're trying to use ES2016 syntax, but instead of making more yearly presets, Babel has a better preset that we recommend you use instead: npm install babel-preset-env --save-dev. <br/><br/>We're really excited that you're trying to use ES2016 syntax, but instead of making more yearly presets, Babel has a better preset that we recommend you use instead: npm install babel-preset-env --save-dev. </div>  
+                        
+                        </div>
                     </div>
                 </div>
             </div>

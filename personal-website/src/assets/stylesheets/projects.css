@@ -101,6 +101,17 @@
   top: 5%;
   background-color: rgba(0, 0, 0, 0.76); }
 
+.modal-content-div {
+  margin: 10%; }
+
+.modal-content-header {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2em; }
+
+.modal-content-text {
+  color: white; }
+
 .modal-exit-button-div {
   float: right;
   width: 5%;
