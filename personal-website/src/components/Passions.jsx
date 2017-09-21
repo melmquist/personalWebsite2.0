@@ -32,7 +32,7 @@ export default class Passions extends React.Component{
                             Food
                         </div>
                         <div className="passion-copy ralewayRegular">
-                            I like to cook and try new recipes and I have been doing it my entire life..Recently I have become more interested in where the food comes from...long term I want to work hard to improve the food system in the USA and give more people access to quality ingredients made from small scale agriculture                        
+                            I love to cook almost as much as I love to eat and entertain. Eating well and occasionally wowing my friends is great but recently I have become very interested in the American food system and in the long term I hope to work on projects that improve our society’s access to quality food from small scale producers.
                         </div>
                     </div>
 

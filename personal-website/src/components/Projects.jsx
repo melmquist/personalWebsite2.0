@@ -28,7 +28,7 @@ export default class Projects extends React.Component{
     };
 
     handleModal(ref) {
-        console.log("HANDLE MODAL CALLED WITH REF???", ref)
+        // console.log("HANDLE MODAL CALLED WITH REF???", ref)
         if(ref === "autoi") {
             this.setState({showAutoIModal: true})
         }
@@ -44,7 +44,7 @@ export default class Projects extends React.Component{
     }
 
     handleCancelModal() {
-        console.log("handleCancelModal CALLED UP TOP")
+        // console.log("handleCancelModal CALLED UP TOP")
         this.setState({
             showAutoIModal: false,
             showWejayModal: false,
@@ -54,7 +54,7 @@ export default class Projects extends React.Component{
     }
 
     render() {
-        console.log("STATE PROJECTS: ", this.state)
+        // console.log("STATE PROJECTS: ", this.state)
         return (
             <div className="projects-background-div ">
                 <div className="projects-content-div ">
@@ -221,7 +221,7 @@ class ProjectModal extends React.Component {
     }
 
     handleCancel() {
-        console.log("HANDLE CANCEL CALLED")
+        // console.log("HANDLE CANCEL CALLED")
         this.props.handleCancel()
     }
 
