@@ -22,10 +22,10 @@ export default class Contact extends React.Component{
                     </div>
 
                     <div className="contact-icons-div">
-                        <img src={github} alt="github" />
-                        <img src={stackOverflow} alt="stackOverflow" />
-                        <img src={linkedIn} alt="linkedIn" />
-                        <img src={twitter} alt="twitter" />
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/melmquist"><img src={github} alt="github" /></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/6084963/melmquist?tab=profile"><img src={stackOverflow} alt="stackOverflow" /></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mattelmquist/"><img src={linkedIn} alt="linkedIn" /></a>
+                        {/* <img src={twitter} alt="twitter" /> */}
 
                     </div>
                     <div className="contact-lower-copy-div ralewayBold">Thanks for visiting!</div>

@@ -121,19 +121,20 @@
 
 .project-modal-background {
     position: absolute;
-    height: 200vh;
-    width: 200vw;
-    top: -30vh;
-    left: -80vw;
+    height: 401vh;
+    width: 100vw;
+    top: -110vh;
+    left: -24vw;
+    z-index: 1000;
 }
 
 .project-modal-outer {
     position: absolute;
     height: 70vh;
     width: 75vw;
-    top: 35vh;
-    left: 70vw;
-    z-index: 10
+    top: 116vh;
+    left: 12vw;
+    z-index: 10;
 }
 
 .project-modal-inner {
@@ -141,12 +142,14 @@
     width: 90%;
     position: relative;
     margin:0 auto;
-    top: 5%;
+    top: -7%;
     background-color: rgba(0, 0, 0, 0.76);
 }
 
 .modal-content-div {
     margin: 10%;
+    top: 15%;
+    position: relative;
 }
 .modal-content-header {
     color: white;

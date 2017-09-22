@@ -12,6 +12,28 @@ const stackfighterImage = require('../assets/webImages/stackfighterScreenshot.pn
 const journalistImage = require('../assets/webImages/journalist.png');
 const cancel = require('../assets/webImages/cancel.png');
 
+const modalData = {
+    autoi: {
+        header: "The Auto i",
+        text: "I am currently working with The Auto i to build a front end web application that allows potential customers to learn about their upcoming product and also allows existing beta clients to access their data. This project is being built with React/Redux, Firebase and many other leading edge front end technologies.",
+        links: []
+    },
+    wejay: {
+        header: "Wejay",
+        text: "A communal DJ app that allows users to pick songs democratically from Soundcloud instead of fighting over the AUX cable. This mobile first application averages user input on potential songs to dynamically alter a public music queue. Persistence and real time updates is achieved with Firebase, React, Redux and Material-UI.",
+        links: []
+    },
+    stackfighter: {
+        header: "StackFighter",
+        text: "A prototypal e-commerce site built with Node, Sequelize, Express and AngularJS where users can buy Street Fighter characters to protect them from online bullying.",
+        links: []
+    },
+    journalist: {
+        header: "Journalist Website and Brand Building",
+        text: "For this marketing and web development project, I worked with Barbara Mantel, an award winning journalist who needed to boost her online presence and provide publishers with a reliable way to understand her personal brand and her extensive body of work.",
+        links: []
+    },
+}
 export default class Projects extends React.Component{
     constructor(props) {
         super(props);
@@ -227,12 +249,12 @@ class ProjectModal extends React.Component {
 
     render() {
         return (
-            <div className="project-modal-background ">   
-                <ScrollLock />
-                <div className="project-modal-outer ">   
-                    <div className="modal-exit-button-div ">
+            <div className="project-modal-background" onClick={this.handleCancel}>   
+                {/* <ScrollLock /> */}
+                <div className="project-modal-outer" onClick={this.handleCancel}>   
+                    {/* <div className="modal-exit-button-div ">
                         <img className="modal-exit-button-img" src={cancel} alt="cancel" onClick={this.handleCancel}/>
-                    </div>
+                    </div> */}
                     <div className="project-modal-inner ">   
                         <div className="modal-content-div "> 
                             <div className="modal-content-header ralewayBold">Placeholder</div>
