@@ -15,21 +15,25 @@ const cancel = require('../assets/webImages/cancel.png');
 const modalData = {
     autoi: {
         header: "The Auto i",
+        tagline: "iOT Dash Camera SPA",
         text: "I am currently working with The Auto i to build a front end web application that allows potential customers to learn about their upcoming product and also allows existing beta clients to access their data. This project is being built with React/Redux, Firebase and many other leading edge front end technologies.",
         links: []
     },
     wejay: {
         header: "Wejay",
+        tagline: "A Communal DJ app",        
         text: "A communal DJ app that allows users to pick songs democratically from Soundcloud instead of fighting over the AUX cable. This mobile first application averages user input on potential songs to dynamically alter a public music queue. Persistence and real time updates is achieved with Firebase, React, Redux and Material-UI.",
         links: []
     },
     stackfighter: {
         header: "StackFighter",
-        text: "A prototypal e-commerce site built with Node, Sequelize, Express and AngularJS where users can buy Street Fighter characters to protect them from online bullying.",
+        tagline: "E-Commerce prototype",        
+        text: "A prototypal e-commerce site built with Node, Sequelize, Express and AngularJS.  This project was designed to mimic a retro video game interface so that users can Street Fighter characters. Why would you buy StreetFighter characters? To protect you from online bullying obviously...",
         links: []
     },
     journalist: {
-        header: "Journalist Website and Brand Building",
+        header: "BarbaraMantel.com",
+        tagline: "Journalist Website and Branding",        
         text: "For this marketing and web development project, I worked with Barbara Mantel, an award winning journalist who needed to boost her online presence and provide publishers with a reliable way to understand her personal brand and her extensive body of work.",
         links: []
     },
@@ -86,12 +90,18 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={autoiLogo2}
                                 header="autoi"
+                                tagline={modalData.autoi.tagline}
                                 background={this.state.noBackground}
                                 handleModal={this.handleModal}
                             />
                             {
                                 this.state.showAutoIModal && this.state.showAutoIModal ? 
-                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <ProjectModal 
+                                    handleCancel={this.handleCancelModal}
+                                    header={modalData.autoi.header}
+                                    text={modalData.autoi.text}
+                                    links={modalData.autoi.links}
+                                    /> :
                                 <div></div>
                             }
                            
@@ -100,12 +110,18 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={wejayLogo}
                                 header="wejay"
+                                tagline={modalData.wejay.tagline}
                                 background={this.state.orangeBackground}
                                 handleModal={this.handleModal}
                             />
                             {
                                 this.state.showWejayModal && this.state.showWejayModal ? 
-                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <ProjectModal 
+                                    handleCancel={this.handleCancelModal}
+                                    header={modalData.wejay.header}
+                                    text={modalData.wejay.text}
+                                    links={modalData.wejay.links}
+                                    /> :
                                 <div></div>
                             }
 
@@ -116,12 +132,18 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={stackfighterImage}
                                 header="stackfighter"
+                                tagline={modalData.stackfighter.tagline}
                                 background={this.state.noBackground}
                                 handleModal={this.handleModal}
                             />
                             {
                                 this.state.showStackfighterModal && this.state.showStackfighterModal ? 
-                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <ProjectModal 
+                                    handleCancel={this.handleCancelModal}
+                                    header={modalData.stackfighter.header}
+                                    text={modalData.stackfighter.text}
+                                    links={modalData.stackfighter.links}
+                                    /> :
                                 <div></div>
                             }
         
@@ -130,12 +152,18 @@ export default class Projects extends React.Component{
                             <ProjectCard 
                                 image={journalistImage}
                                 header="journalist"
+                                tagline={modalData.journalist.tagline}
                                 background={this.state.noBackground}
                                 handleModal={this.handleModal}
                             />
                             {
                                 this.state.showJournalistModal && this.state.showJournalistModal ? 
-                                <ProjectModal handleCancel={this.handleCancelModal}/> :
+                                <ProjectModal 
+                                    handleCancel={this.handleCancelModal}
+                                    header={modalData.journalist.header}
+                                    text={modalData.journalist.text}
+                                    links={modalData.journalist.links}
+                                    /> :
                                 <div></div>
                             }
            
@@ -191,7 +219,12 @@ class ProjectCard extends React.Component{
 
                 <Transition in={this.state.in} timeout={1000}>
                     {(status) => (
-                        <ProjectCardOverlay handleModal={this.props.handleModal} status={status} headerRef={this.props.header}/>
+                        <ProjectCardOverlay 
+                            handleModal={this.props.handleModal} 
+                            status={status} 
+                            headerRef={this.props.header}
+                            tagline={this.props.tagline}
+                            />
                     )}
                 </Transition>                
                 
@@ -220,10 +253,10 @@ class ProjectCardOverlay extends React.Component{
        
                 {/* {console.log("this.PROPS IN PROJECT CAR OVERLAY: ", this.props)} */}
     
-                <div className="animationHoverDivContent">   
-                    <div className="projectLinkText ralewayBold">Live Link</div>
-                    <div className="projectLinkText ralewayBold">Github Repo</div>
-                    <div className="projectLinkText ralewayBold" onClick={this.handleModalDownHere}>Full Description</div>
+                <div className="animationHoverDivContent redBorder">   
+                    <div className="projectTagline ralewayRegular redBorder">{this.props.tagline}</div>
+                    {/* <div className="projectLinkText ralewayBold"></div> */}
+                    <div className="projectDetailsLink ralewayBold blueBorder" onClick={this.handleModalDownHere}>Links/Description</div>
                     {/* THIS DOESNT KNOW HOW TO PASS UP A REF 
                     MAYBE BECAUSE IT DOESNT HAVE ITS OWN STATE????
                     SO MAKE IT A STATEFUL COMPONENT AND BUBBLE THE SHIT UP VIA A HELPER FUNCTION IN HERE???????????????? */}
@@ -257,8 +290,8 @@ class ProjectModal extends React.Component {
                     </div> */}
                     <div className="project-modal-inner ">   
                         <div className="modal-content-div "> 
-                            <div className="modal-content-header ralewayBold">Placeholder</div>
-                            <div className="modal-content-text ralewayRegular">We're really excited that you're trying to use ES2016 syntax, but instead of making more yearly presets, Babel has a better preset that we recommend you use instead: npm install babel-preset-env --save-dev. <br/><br/>We're really excited that you're trying to use ES2016 syntax, but instead of making more yearly presets, Babel has a better preset that we recommend you use instead: npm install babel-preset-env --save-dev. </div>  
+                            <div className="modal-content-header ralewayBold">{this.props.header}</div>
+                            <div className="modal-content-text ralewayRegular">{this.props.text}</div>  
                         
                         </div>
                     </div>
