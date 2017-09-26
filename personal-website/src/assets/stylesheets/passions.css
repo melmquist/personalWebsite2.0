@@ -13,10 +13,12 @@
   width: 85%; }
 
 .passions-header-div {
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  margin-bottom: 35px; }
 
 .passion-div {
-  padding-top: 35px; }
+  margin-bottom: 55px;
+  margin-top: 65px; }
 
 .passion-header {
   font-size: 1.4em;
@@ -27,8 +29,15 @@
   font-size: 1em;
   line-height: 1.4em; }
 
+.top {
+  padding-left: 3%; }
+
+.bottom {
+  padding-right: 5%; }
+
 .passion-img-div {
   display: inline-block;
+  vertical-align: middle;
   width: 30%; }
 
 .passion-img-div img {
@@ -36,4 +45,11 @@
 
 .passion-text-div {
   display: inline-block;
-  width: 70%; }
+  width: 70%;
+  vertical-align: middle; }
+
+.soccer-image {
+  transform: rotate(180deg); }
+
+.food-image {
+  width: 80%; }
