@@ -35,7 +35,7 @@ const modalData = {
     journalist: {
         header: "BarbaraMantel.com",
         tagline: "Journalist Website",        
-        text: "For this marketing and web development project, I worked with Barbara Mantel, an award winning journalist who needed to boost her online presence and provide publishers with a reliable way to understand her personal brand and her extensive body of work.",
+        text: "For this marketing and web development project, I worked with Barbara Mantel, an award winning journalist who needed to boost her online presence and provide publishers with a reliable way to understand her personal brand and her extensive body of work. It was an exciting project that allowed me to work on web development as well as digital marketing and I hope to engage in more interdisciplinary projects such as this in the future.",
         links: [['LIVE DEMO', 'https://www.barbaramantel.com/']]
     },
 }
