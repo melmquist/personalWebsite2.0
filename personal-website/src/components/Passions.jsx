@@ -17,8 +17,7 @@ export default class Passions extends React.Component{
                 <div className="passions-content-div">
                     {/* NEED TO NOT SUCKIFY THIS PAGE, MORE DETAILED ABOUT SKILLS AND WORK HISTORY, MAYBE INFO GRAPHIC ABOUT WHAT I'VE DONE */}
                     <div className="passions-header-div ralewayRegular">
-                        I am passionate about Javascript <br/>
-                        and other things... 
+                        I am passionate about Software Engineering as well as...
                     </div>
 
 
@@ -46,7 +45,7 @@ export default class Passions extends React.Component{
                                 Food
                             </div>
                             <div className="passion-copy bottom ralewayRegular">
-                                I love to cook almost as much as I love to eat and entertain. Eating well and occasionally wowing my friends is great but recently I have become very interested in the American food system and in the long term I hope to work on projects that improve our society’s access to quality food from small scale producers.
+                                I love to cook almost as much as I love to eat and entertain. Eating well and occasionally wowing your friends is great but recently I have become very interested in the American food system and in the long term I hope to work on projects that improve our society’s access to quality food from small scale producers.
                             </div>
                         </div>
                         <div className="passion-img-div ">    
