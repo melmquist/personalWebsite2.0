@@ -17,25 +17,25 @@ const modalData = {
         header: "The Auto i",
         tagline: "iOT Dash Camera SPA",
         text: "I am currently working with The Auto i to build a front end web application that allows potential customers to learn about their upcoming product and also allows existing beta clients to access their data. This project is being built with React/Redux, Firebase and many other leading edge front end technologies.",
-        links: []
+        links: [['WEBSITE UNDER CONSTRUCTION', ''], ['PRIVATE REPO', '']]
     },
     wejay: {
         header: "Wejay",
         tagline: "A Communal DJ app",        
         text: "A communal DJ app that allows users to pick songs democratically from Soundcloud instead of fighting over the AUX cable. This mobile first application averages user input on potential songs to dynamically alter a public music queue. Persistence and real time updates is achieved with Firebase, React, Redux and Material-UI.",
-        links: []
+        links: [['LIVE DEMO', 'http://wejay.herokuapp.com/'], ['GITHUB REPO', 'https://github.com/christophermanahan/wejay'], ['VIDEO', 'https://www.youtube.com/watch?v=-XEOkNGz8m0']]
     },
     stackfighter: {
         header: "StackFighter",
         tagline: "E-Commerce prototype",        
         text: "A prototypal e-commerce site built with Node, Sequelize, Express and AngularJS.  This project was designed to mimic a retro video game interface so that users can Street Fighter characters. Why would you buy StreetFighter characters? To protect you from online bullying obviously...",
-        links: []
+        links: [['LIVE DEMO', 'https://stormy-atoll-85405.herokuapp.com/']]
     },
     journalist: {
         header: "BarbaraMantel.com",
-        tagline: "Journalist Website and Branding",        
+        tagline: "Journalist Website",        
         text: "For this marketing and web development project, I worked with Barbara Mantel, an award winning journalist who needed to boost her online presence and provide publishers with a reliable way to understand her personal brand and her extensive body of work.",
-        links: []
+        links: [['LIVE DEMO', 'https://www.barbaramantel.com/']]
     },
 }
 export default class Projects extends React.Component{
@@ -69,7 +69,7 @@ export default class Projects extends React.Component{
         }
     }
 
-    handleCancelModal() {
+    handleCancelModal(e) {
         // console.log("handleCancelModal CALLED UP TOP")
         this.setState({
             showAutoIModal: false,
@@ -253,10 +253,10 @@ class ProjectCardOverlay extends React.Component{
        
                 {/* {console.log("this.PROPS IN PROJECT CAR OVERLAY: ", this.props)} */}
     
-                <div className="animationHoverDivContent redBorder">   
-                    <div className="projectTagline ralewayRegular redBorder">{this.props.tagline}</div>
+                <div className="animationHoverDivContent">   
+                    <div className="projectTagline ralewayRegular ">{this.props.tagline}</div>
                     {/* <div className="projectLinkText ralewayBold"></div> */}
-                    <div className="projectDetailsLink ralewayBold blueBorder" onClick={this.handleModalDownHere}>Links/Description</div>
+                    <div className="projectDetailsLink ralewayBold " onClick={this.handleModalDownHere}>Links/Description</div>
                     {/* THIS DOESNT KNOW HOW TO PASS UP A REF 
                     MAYBE BECAUSE IT DOESNT HAVE ITS OWN STATE????
                     SO MAKE IT A STATEFUL COMPONENT AND BUBBLE THE SHIT UP VIA A HELPER FUNCTION IN HERE???????????????? */}
@@ -275,9 +275,11 @@ class ProjectModal extends React.Component {
         this.handleCancel = this.handleCancel.bind(this)
     }
 
-    handleCancel() {
+    handleCancel(e) {
         // console.log("HANDLE CANCEL CALLED")
+        e.stopPropagation();
         this.props.handleCancel()
+
     }
 
     render() {
@@ -292,7 +294,17 @@ class ProjectModal extends React.Component {
                         <div className="modal-content-div "> 
                             <div className="modal-content-header ralewayBold">{this.props.header}</div>
                             <div className="modal-content-text ralewayRegular">{this.props.text}</div>  
-                        
+                            <div className="links-map-div">  
+                                {
+                                    this.props.links && this.props.links.map((oneLinkGroup, index) => (
+                                        <a className="one-link" key={index} target="_blank" rel="noopener noreferrer" href={oneLinkGroup[1]}>
+                                            <div className="ralewayRegular">   
+                                                {oneLinkGroup[0]}
+                                            </div>
+                                        </a>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>

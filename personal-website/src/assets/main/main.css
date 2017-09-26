@@ -208,14 +208,14 @@ body {
 .projectTagline {
   color: white;
   font-size: 1.2em;
-  padding-left: 25%;
-  padding-top: 4%; }
+  padding-left: 15%;
+  padding-top: 10%; }
 
 .projectDetailsLink {
   color: white;
   font-size: 1.2em;
-  padding-left: 25%;
-  padding-top: 4%;
+  padding-left: 15%;
+  padding-top: 10%;
   cursor: pointer; }
 
 .projectDetailsLink:hover {
@@ -234,8 +234,7 @@ body {
   height: 70vh;
   width: 75vw;
   top: 116vh;
-  left: 12vw;
-  z-index: 10; }
+  left: 12vw; }
 
 .project-modal-inner {
   height: 90%;
@@ -243,7 +242,8 @@ body {
   position: relative;
   margin: 0 auto;
   top: -7%;
-  background-color: rgba(0, 0, 0, 0.76); }
+  background-color: rgba(0, 0, 0, 0.76);
+  z-index: 1010000; }
 
 .modal-content-div {
   margin: 10%;
@@ -256,7 +256,8 @@ body {
   font-size: 2em; }
 
 .modal-content-text {
-  color: white; }
+  color: white;
+  margin-bottom: 10%; }
 
 .modal-exit-button-div {
   float: right;
@@ -266,6 +267,24 @@ body {
 .modal-exit-button-img {
   float: right;
   width: 50px; }
+
+.links-map-div {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto; }
+
+.one-link {
+  color: white;
+  display: inline-block;
+  border: 1px solid white;
+  padding: 5%;
+  text-align: center;
+  border: 1px solid white; }
+
+.one-link:hover {
+  background-color: rgba(255, 255, 255, 0.2); }
 
 .passions-background-div {
   height: 100vh;
@@ -283,11 +302,11 @@ body {
 
 .passions-header-div {
   font-size: 1.4em;
-  margin-bottom: 35px; }
-
-.passion-div {
   margin-bottom: 55px;
   margin-top: 65px; }
+
+.passion-div {
+  margin-bottom: 35px; }
 
 .passion-header {
   font-size: 1.4em;
@@ -310,7 +329,7 @@ body {
   width: 30%; }
 
 .passion-img-div img {
-  width: 200px; }
+  width: 100%; }
 
 .passion-text-div {
   display: inline-block;
@@ -341,7 +360,7 @@ body {
   text-align: center;
   font-size: 1.2em;
   line-height: 1.5em;
-  padding-bottom: 30px; }
+  padding-bottom: 50px; }
 
 .contact-icons-div {
   text-align: center; }
@@ -353,4 +372,4 @@ body {
 .contact-lower-copy-div {
   text-align: center;
   font-size: 1.4em;
-  padding-top: 30px; }
+  padding-top: 50px; }

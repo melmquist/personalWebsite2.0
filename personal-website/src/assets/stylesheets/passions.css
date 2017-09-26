@@ -14,11 +14,11 @@
 
 .passions-header-div {
   font-size: 1.4em;
-  margin-bottom: 35px; }
-
-.passion-div {
   margin-bottom: 55px;
   margin-top: 65px; }
+
+.passion-div {
+  margin-bottom: 35px; }
 
 .passion-header {
   font-size: 1.4em;
@@ -41,7 +41,7 @@
   width: 30%; }
 
 .passion-img-div img {
-  width: 200px; }
+  width: 100%; }
 
 .passion-text-div {
   display: inline-block;
