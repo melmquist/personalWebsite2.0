@@ -17,7 +17,8 @@ const modalData = {
         header: "The Auto i",
         tagline: "iOT Dash Camera SPA",
         text: "I am currently working with The Auto i to build a front end web application that allows potential customers to learn about their upcoming product and also allows existing beta clients to access their data. This project is being built with React/Redux, Firebase and many other leading edge front end technologies.",
-        links: [['WEBSITE UNDER CONSTRUCTION', ''], ['PRIVATE REPO', '']]
+        // links: [['WEBSITE UNDER CONSTRUCTION', ''], ['PRIVATE REPO', '']]
+        links: []
     },
     wejay: {
         header: "Wejay",

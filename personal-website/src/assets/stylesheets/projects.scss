@@ -152,15 +152,20 @@
     position: relative;
     margin:0 auto;
     top: -7%;
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1010000;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .modal-content-div {
     margin: 10%;
-    top: 15%;
+    // top: 15%;
     position: relative;
 }
+
+
 .modal-content-header {
     color: white;
     margin-bottom: 20px;
@@ -168,7 +173,8 @@
 }
 .modal-content-text {
     color: white;
-    margin-bottom: 10%;
+    line-height: 1.4em;
+    // margin-bottom: 10%;
 }
 
 
@@ -185,24 +191,21 @@
 
 
 .links-map-div {
-    margin-top: 10%;
-    // text-align: justify;
-    // text-align-last: center;
+    // margin-top: 10%;
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: auto;
 }
 
 .one-link {
     color: white;   
     display: inline-block; 
-    // text-align: justify;
-    // text-align-last: center;
     border: 1px solid white;
     padding: 5%;
+    margin: 5%;
     text-align: center;
     border: 1px solid white;
+    width: 100%
 }
 
 
