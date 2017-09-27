@@ -1,6 +1,6 @@
 {
   "name": "personal-website",
-  "homepage": "http://melmquist.github.io/personalWebsite2.0",
+  "homepage": "http://mattelmquist.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
