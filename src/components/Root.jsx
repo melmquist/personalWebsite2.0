@@ -148,6 +148,7 @@ export default class Root extends React.Component{
                     <Element name="aboutSnapScrollTarget" className="element">
                         {/* {console.log("PROPS: ", this.props)} */}
                         <About />
+                        ABOUTTTT
                     </Element>
                     
                     <Element name="projectsSnapScrollTarget" className="element">

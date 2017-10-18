@@ -258,9 +258,8 @@ class ProjectCardOverlay extends React.Component{
                     <div className="projectTagline ralewayRegular ">{this.props.tagline}</div>
                     {/* <div className="projectLinkText ralewayBold"></div> */}
                     <div className="projectDetailsLink ralewayBold " onClick={this.handleModalDownHere}>Links/Description</div>
-                    {/* THIS DOESNT KNOW HOW TO PASS UP A REF 
-                    MAYBE BECAUSE IT DOESNT HAVE ITS OWN STATE????
-                    SO MAKE IT A STATEFUL COMPONENT AND BUBBLE THE SHIT UP VIA A HELPER FUNCTION IN HERE???????????????? */}
+                    
+                    
                 </div>
                 
             </div>

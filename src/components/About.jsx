@@ -37,14 +37,7 @@ export default class About extends React.Component{
                     <div className="about-image-div">
                         <img className="about-image" src={aboutImg} alt="aboutImg" />
                     </div>
-
-                    {/* 
-                    ADD TYPED.JS
-                    https://github.com/mattboldt/typed.js/
                     
-                    TO REACT: 
-                    https://jsfiddle.net/mattboldt/ovat9jmp/
-                     */}
                     <div className="about-header-div ralewayBold">
                         <span 
                             style={{ whiteSpace: 'pre' }}
