@@ -4,8 +4,13 @@ import './index.scss';
 import Root from './components/Root';
 import registerServiceWorker from './registerServiceWorker';
 
+const NewLandingPage = () => {
+    return (
+        <div>Under Construction...</div>
+    )
+}
 ReactDOM.render(
-    <Root />, 
+    <NewLandingPage />, 
     document.getElementById('root')
 );
 registerServiceWorker();

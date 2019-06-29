@@ -14,7 +14,7 @@ const cancel = require('../assets/webImages/cancel.png');
 
 const modalData = {
     autoi: {
-        header: "The Auto i TESTTESTTEST",
+        header: "The Auto i TEST",
         tagline: "iOT Dash Camera SPA",
         text: "I am currently working with The Auto i to build a front end web application that allows potential customers to learn about their upcoming product and also allows existing beta clients to access their data. This project is being built with React/Redux, Firebase and many other leading edge front end technologies.",
         // links: [['WEBSITE UNDER CONSTRUCTION', ''], ['PRIVATE REPO', '']]
